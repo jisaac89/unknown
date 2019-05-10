@@ -1,1 +1,1 @@
-declare module '@fullpage/react-fullpage'
+declare module 'react-swipeable-views-utils'

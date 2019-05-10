@@ -1,29 +1,25 @@
 import React from 'react'
 import { Layer } from '../recoil2/components/Layer/Layer'
-import ReactFullpage from '@fullpage/react-fullpage'
+import { Swiper } from '../components/swiper'
+import { GlobalStyle } from '../styles/globalStyle'
 
 export default () => {
-  const onSlideLeave = (origin, destination: { index: number }, direction) => {
-    console.log(destination.index)
-  }
-
   return (
-    <ReactFullpage
-      licenseKey={'57D2108D-112842B2-B568E697-8ACF77D5'}
-      onLeave={onSlideLeave}
-      render={({ state, fullpageApi }) => {
-        return (
-          <ReactFullpage.Wrapper>
-            <div className="section">
-              <p>Section 1 (welcome to fullpage.js)</p>
-              <button onClick={() => fullpageApi.moveSectionDown()}>Click me to move down</button>
-            </div>
-            <div className="section">
-              <p>Section 2</p>
-            </div>
-          </ReactFullpage.Wrapper>
-        )
-      }}
-    />
+    <>
+      <Layer id="main-wrapper" fill={1} flex={'row'}>
+        <Swiper>
+          <Layer flexCenter fill={1}>
+            A
+          </Layer>
+          <Layer flexCenter fill={1}>
+            B
+          </Layer>
+          <Layer flexCenter fill={1}>
+            C
+          </Layer>
+        </Swiper>
+      </Layer>
+      <GlobalStyle />
+    </>
   )
 }
