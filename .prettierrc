@@ -1,0 +1,9 @@
+{
+	"printWidth": 120,
+	"semi": false,
+	"spaces": 2,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"bracketSpacing": true,
+	"jsxBracketSameLine": true
+}
