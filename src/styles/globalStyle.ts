@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 		outline: none;
 	}
 
-	#main-wrapper > div,.react-swipeable-view-container, .react-swipeable-view-container> div{
+	#main-wrapper > div,.react-swipeable-view-container, .react-swipeable-view-container> div,#___gatsby, #___gatsby > div, #___gatsby > div> div{
 		height:100%; width:100%;
 	}
 
