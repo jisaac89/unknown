@@ -6,16 +6,22 @@ interface ISwiperProps {
   children: JSX.Element[]
   isSlide?: number
   onChangeIndex?: () => void
+  onSwitching?: (index: number) => void
 }
 
-const Swiper: FunctionComponent<ISwiperProps> = ({ children, isSlide, onChangeIndex }) => {
+const Swiper: FunctionComponent<ISwiperProps> = ({ children, isSlide, onChangeIndex, onSwitching }) => {
   const styleWrapper = {
     padding: '0px'
   }
   const slideRenderer = (item: any, index: number) => item
 
   return (
-    <SwipeableViews axis={'y'} onChangeIndex={onChangeIndex} index={isSlide} style={styleWrapper}>
+    <SwipeableViews
+      onSwitching={onSwitching}
+      axis={'y'}
+      onChangeIndex={onChangeIndex}
+      index={isSlide}
+      style={styleWrapper}>
       {Children.map(children, slideRenderer)}
     </SwipeableViews>
   )

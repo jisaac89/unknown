@@ -4,10 +4,14 @@ import { Swiper } from '../components/swiper'
 import { GlobalStyle } from '../styles/globalStyle'
 
 export default () => {
+  const onChangeIndex = () => {
+    console.log('test')
+  }
+
   return (
     <>
       <Layer id="main-wrapper" fill={1} flex={'row'}>
-        <Swiper>
+        <Swiper onChangeIndex={onChangeIndex}>
           <Layer flexCenter fill={1}>
             A
           </Layer>
