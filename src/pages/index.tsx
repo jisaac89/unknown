@@ -17,18 +17,24 @@ export default () => {
         licenseKey={'57D2108D-112842B2-B568E697-8ACF77D5'}
         onLeave={onSlideLeave}
         render={({ state, fullpageApi }) => {
+          const moveTo = () => {
+            fullpageApi.moveTo(4)
+          }
+
           return (
             <ReactFullpage.Wrapper>
               <div className="section green">
                 <Layer fill={1} flexCenter>
                   <Layer fill={1} flex={'row'}>
                     <Layer className="border-green" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
-                      <h1>
+                      <h1 onClick={moveTo}>
                         You have a{' '}
                         <TextLoop>
                           <span className="color-green">Juicy</span>
-                          <span className="color-green">Sweet</span>
                           <span className="color-green">Amazing</span>
+                          <span className="color-green">Sweet</span>
+                          <span className="color-green">World-changing</span>
+                          <span className="color-green">Delicious</span>
                         </TextLoop>{' '}
                         idea.
                       </h1>
@@ -75,8 +81,11 @@ export default () => {
                         We build you an amazing{' '}
                         <TextLoop>
                           <span className="color-blue">product.</span>
+                          <span className="color-blue">brand.</span>
                           <span className="color-blue">wireframe.</span>
                           <span className="color-blue">prototype.</span>
+                          <span className="color-blue">logo.</span>
+                          <span className="color-blue">design.</span>
                         </TextLoop>{' '}
                       </h1>
                     </Layer>
@@ -85,6 +94,31 @@ export default () => {
                     </Layer>
                   </Layer>
                   <div className="box-blue" />
+                </Layer>
+              </div>
+
+              <div className="section blue">
+                <Layer fill={1} flexCenter>
+                  <Layer fill={1} flex={'row'}>
+                    <Layer className="border-all" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
+                      <h1 className="color-green">UX & Design</h1>
+                    </Layer>
+                    <Layer className="border-all" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
+                      <h1 className="color-red">Development</h1>
+                    </Layer>
+                    <Layer className="border-all" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
+                      <h1 className="color-blue">Marketing</h1>
+                    </Layer>
+                  </Layer>
+                </Layer>
+              </div>
+              <div className="section blue">
+                <Layer fill={1} flexCenter>
+                  <Layer fill={1} flex={'row'}>
+                    <Layer className="border-all" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
+                      <h1>CONTACT US</h1>
+                    </Layer>
+                  </Layer>
                 </Layer>
               </div>
             </ReactFullpage.Wrapper>
