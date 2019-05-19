@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Layer } from '../recoil2/components/Layer/Layer'
 import ReactFullpage from '@fullpage/react-fullpage'
 import { TextMast } from '../components/TextMask'
 import TextLoop from 'react-text-loop'
 import { GlobalStyle } from '../styles/globalStyle'
-import { dimensions } from '../recoil2/styles/classList'
+import { dimensions, mb, mt, p } from '../recoil2/styles/classList'
 
 export default () => {
   const onSlideLeave = (origin, destination: { index: number }, direction) => {
@@ -27,7 +27,9 @@ export default () => {
                 <Layer fill={1} flexCenter>
                   <Layer fill={1} flex={'row'}>
                     <Layer className="border-green" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
-                      <h1 onClick={moveTo}>
+                      <img width={300} src={'/img/logo.png'} />
+
+                      <h1 style={{ ...mt('10px') }} onClick={moveTo}>
                         You have a{' '}
                         <TextLoop>
                           <span className="color-green">Juicy</span>
@@ -38,16 +40,19 @@ export default () => {
                         </TextLoop>{' '}
                         idea.
                       </h1>
+
+                      <h3 style={{ ...mt('10px') }} onClick={moveTo}>
+                        Lets build it together
+                      </h3>
+
+                      <button style={{ ...p('10px'), ...mt('10px') }}>Contact Us</button>
                     </Layer>
                     <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
                       <img width={600} src={'/img/juicy.jpg'} />
                     </Layer>
                   </Layer>
-
-                  <div className="box-green" />
                 </Layer>
               </div>
-
               <div className="section red">
                 <Layer fill={1} flexCenter>
                   <Layer fill={1} flex={'row'}>
@@ -72,7 +77,6 @@ export default () => {
                   </Layer>
                 </Layer>
               </div>
-
               <div className="section blue">
                 <Layer fill={1} flexCenter>
                   <Layer fill={1} flex={'row'}>
@@ -93,10 +97,8 @@ export default () => {
                       <img width={600} src={'/img/sweet.jpg'} />
                     </Layer>
                   </Layer>
-                  <div className="box-blue" />
                 </Layer>
               </div>
-
               <div className="section blue">
                 <Layer fill={1} flexCenter>
                   <Layer fill={1} flex={'row'}>
@@ -125,6 +127,9 @@ export default () => {
           )
         }}
       />
+      {/* <div className="home-logo-bottom">
+        <img width={200} src={'/img/logo.png'} />
+      </div> */}
       <GlobalStyle />
     </Layer>
   )

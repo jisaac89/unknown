@@ -306,5 +306,16 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 
+	.home-logo-bottom{
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		z-index:10;
+		margin:auto;
+		margin-left:20px;
+		margin-top:20px;
+	}
+
 
 `
