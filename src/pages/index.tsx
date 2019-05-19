@@ -15,11 +15,21 @@ export default () => {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <p>Section 1 (welcome to fullpage.js)</p>
-              <button onClick={() => fullpageApi.moveSectionDown()}>Click me to move down</button>
+              <Layer flexCenter>
+                <img width={600} src={'/img/juicy.jpg'} />
+              </Layer>
             </div>
+
             <div className="section">
-              <p>Section 2</p>
+              <Layer flexCenter>
+                <img width={600} src={'/img/phone.jpg'} />
+              </Layer>
+            </div>
+
+            <div className="section">
+              <Layer flexCenter>
+                <img width={600} src={'/img/sweet.jpg'} />
+              </Layer>
             </div>
           </ReactFullpage.Wrapper>
         )
