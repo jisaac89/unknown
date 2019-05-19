@@ -317,5 +317,26 @@ export const GlobalStyle = createGlobalStyle`
 		margin-top:20px;
 	}
 
+	.btn-primary{
+		margin-top: 10px;
+    background: #2033c8;
+    color: white;
+    border-radius: 4px;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: 0;
+		font-weight: 100;
+		z-index:10;
+		cursor:pointer;
+	}
+
+	.home-shadow-both{
+		box-shadow: 0 0 500px #d8d8d8;
+	}
+
+	.border-tb{
+		border-top:1px solid #ccc;
+		border-bottom:1px solid #ccc;
+	}
 
 `
