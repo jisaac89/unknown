@@ -26,9 +26,7 @@ export const GlobalStyle = createGlobalStyle`
 		color:white;
 	}
 	
-	h0 span, h1 span,h2 span,h3 span{
-		color: white ;
-	}
+	
 
 	span.text{
 		color: #717171;
@@ -41,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	h1{
 		font-weight:300;
-		font-size:24px;
+		font-size:44px;
 	}
 
 	h2{
@@ -262,5 +260,51 @@ export const GlobalStyle = createGlobalStyle`
 		}
 	}
 	
+
+	.box-green{
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 0 300px 0px #6dad0b;
+	}
+
+	.box-red{
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+		box-shadow: 0 0 300px 0px #1577e0;
+	}
+
+	.box-blue{
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+		box-shadow: 0 0 300px 0px #fe6eb5;
+	}
+
+	.color-green{
+		color: #6dad0b;
+	}
+
+	.color-red{
+		color:  #063390;
+	}
+
+	.color-blue{
+		color:  #fe6eb5;
+	}
+
+	.section{
+		position:relative;
+		overflow:hidden;
+	}
+
+
 
 `
