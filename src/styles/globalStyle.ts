@@ -38,8 +38,10 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	h1{
-		font-weight:300;
-		font-size:44px;
+		font-weight:900;
+		font-size:64px;
+		text-transform: uppercase;
+
 	}
 
 	h2{
@@ -337,6 +339,90 @@ export const GlobalStyle = createGlobalStyle`
 	.border-tb{
 		border-top:1px solid #ccc;
 		border-bottom:1px solid #ccc;
+	}
+
+	.home-box{
+		transition: 1s all ease-in;
+		z-index:5
+	}
+
+	.home-box-1{
+		background-red;
+		width:100%;
+		height:200px;
+		position:absolute;
+
+	}
+
+	.home-box-2{
+		background-blue;
+		width:100%;
+		height:200px;
+		position:absolute;
+
+	}
+	.home-box-3{
+		background-white;
+		width:100%;
+		height:200px;
+		position:absolute;
+
+	}
+	.home-box-4{
+		background-red;
+		width:100%;
+		height:200px;
+		position:absolute;
+
+	}
+	.home-box-5{
+		background-green;
+		width:100%;
+		height:200px;
+		position:absolute;
+
+	}
+
+
+	.blob {
+		position: absolute;
+		top: 0;
+		left: 0;
+		fill: #023F92;
+		width: 50vmax;
+		z-index: -1;
+		animation: move 10s ease-in infinite;
+		transform-origin: 50% 50%;
+	}
+
+
+	.blob2 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		fill: #023F92;
+		width: 50vmax;
+		z-index: -1;
+		animation: move2 10s ease-in infinite;
+		transform-origin: 50% 50%;
+	}
+	
+	@keyframes move {
+		0%   { transform: scale(1)   translate(10px, -30px); }
+		38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+		40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+		78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+		80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+		100% { transform: scale(1)   translate(10px, -30px); }
+	}
+
+	@keyframes move2 {
+		0%   { transform: scale(1)   translate(-20px, 50px); }
+		38%  { transform: scale(0.7, 1) translate(80vw, 30vh) rotate(50deg); }
+		40%  { transform: scale(0.7, 1) translate(80vw, 30vh) rotate(50deg); }
+		78%  { transform: scale(1.6) translate(0vw, 50vh) rotate(-120deg); }
+		80%  { transform: scale(1.6) translate(0vw, 50vh) rotate(-120deg); }
+		100% { transform: scale(1)   translate(-20px, 50px); }
 	}
 
 `
