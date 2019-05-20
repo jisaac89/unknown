@@ -12,7 +12,7 @@ export default () => {
   }
 
   return (
-    <Layer fill={1}>
+    <Layer flex={'column'} fill={1}>
       <ReactFullpage
         licenseKey={'57D2108D-112842B2-B568E697-8ACF77D5'}
         onLeave={onSlideLeave}
@@ -22,7 +22,10 @@ export default () => {
           }
 
           return (
-            <Layer fill={1} flex="column">
+            <Layer fill={1}>
+              {/* <div className="home-header">
+                <button className="btn-primary">Contact Us</button>
+              </div> */}
               <ReactFullpage.Wrapper>
                 <div className="section green">
                   <Layer fill={1} flexCenter>
@@ -35,18 +38,16 @@ export default () => {
                           <TextLoop>
                             <span className="color-green">Juicy</span>
                             <span className="color-green">Amazing</span>
-                            <span className="color-green">Sweet</span>
                             <span className="color-green">World-changing</span>
-                            <span className="color-green">Delicious</span>
                           </TextLoop>{' '}
                           idea.
                         </h1>
 
-                        {/* <h3 style={{ ...mt('10px') }}>Lets build it together</h3>
+                        <h3 style={{ ...mt('10px') }}>Lets build it together</h3>
 
-                      <button onClick={moveTo} className="btn-primary">
-                        Contact Us
-                      </button> */}
+                        <button onClick={moveTo} className="btn-primary">
+                          Contact Us
+                        </button>
                       </Layer>
                       <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
                         <img width={600} src={'/img/juicy.png'} />

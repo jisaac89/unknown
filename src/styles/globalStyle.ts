@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
-		font-family: 'Roboto';
+		font-family: 'Roboto' !important;
 	}
 	*:focus {
 		outline: none;
@@ -423,6 +423,18 @@ export const GlobalStyle = createGlobalStyle`
 		78%  { transform: scale(1.6) translate(0vw, 50vh) rotate(-120deg); }
 		80%  { transform: scale(1.6) translate(0vw, 50vh) rotate(-120deg); }
 		100% { transform: scale(1)   translate(-20px, 50px); }
+	}
+
+	.home-header {
+		z-index:100;
+		background:white;
+	}
+
+	.home-header button{
+		margin-top: 0 !important;
+		background: red;
+		border-radius: 0;
+		text-align:right;
 	}
 
 `
