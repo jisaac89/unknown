@@ -16,17 +16,19 @@ export const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
-		font-family: 'Roboto' !important;
+		font-family: 'Poppins';
 	}
 	*:focus {
 		outline: none;
 	}
 
 	p{
-		color:white;
+		font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 16px;
+    color: #505050;
 	}
-	
-	
 
 	span.text{
 		color: #717171;
@@ -40,10 +42,10 @@ export const GlobalStyle = createGlobalStyle`
 	h1{
 		font-weight:900;
 		font-size:64px;
+		line-height:60px;
 		text-transform: uppercase;
-
 	}
-
+	
 	h2{
 		font-weight:100;
 		font-size:18px;
@@ -59,7 +61,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	.ElementsApp .InputElement, input{
-		font-family: 'Roboto' !important;
+		font-family: 'Poppins';
 		font-weight:100 !important;
 		border-color: rgba(0, 0, 0, 0.23) !important;
 		border-radius: 4px !important;
@@ -320,15 +322,19 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	.btn-primary{
-		margin-top: 10px;
-    background: #2033c8;
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
     color: white;
-    border-radius: 4px;
-    padding: 15px 30px;
-    font-size: 16px;
-    border: 0;
-		font-weight: 100;
-		z-index:10;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+		background-image: linear-gradient(to right,#6dad0b,#94c228,#92c525);
+    overflow: hidden;
+    transition: 0.08s ease;
+		margin-top: 20px;
 		cursor:pointer;
 	}
 
