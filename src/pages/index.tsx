@@ -6,6 +6,10 @@ import TextLoop from 'react-text-loop'
 import { GlobalStyle } from '../styles/globalStyle'
 import { dimensions, mb, mt, p, textAlign, w } from '../recoil2/styles/classList'
 
+{
+  /* <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> */
+}
+
 export default () => {
   const onSlideLeave = (origin, destination: { index: number }, direction) => {
     console.log(destination.index)
@@ -30,116 +34,143 @@ export default () => {
                 <div className="section green">
                   <div className="box-green" />
                   <Layer fill={1} flexCenter>
-                    <Layer fill={1} flex={'row'}>
-                      <Layer className="border-green" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
-                        {/* <img width={300} src={'/img/logo.png'} /> */}
+                    <div style={{ ...dimensions('1400px', '100%', 1) }}>
+                      <Layer fill={1} flex={'row'}>
+                        <Layer className="border-green" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
+                          {/* <img width={300} src={'/img/logo.png'} /> */}
 
-                        <div style={{ ...w('650px') }}>
-                          <h1 style={{ ...mt('10px') }}>
-                            You have a <br />
-                            <TextLoop>
-                              <span className="color-green">Juicy</span>
-                            </TextLoop>{' '}
-                            idea.
-                          </h1>
+                          <div style={{ ...w('100%') }}>
+                            <h1 style={{ ...mt('10px') }}>
+                              You have a <br />
+                              <TextLoop>
+                                <span className="color-green">Juicy</span>
+                              </TextLoop>{' '}
+                              idea.
+                            </h1>
 
-                          <p>
-                            From logo and UX design to web development. We have you covered. <br />
-                            Codeboot is media agency, but the slaves love what they do, <br />
-                            and they get paid too... so like— maybe not like a slave trade.
-                          </p>
+                            <p>
+                              From logo and UX design to web development. We have you covered. <br />
+                              Codeboot is media agency, but the slaves love what they do, <br />
+                              and they get paid too... so like— maybe not like a slave trade.
+                            </p>
 
-                          <button className="btn-primary">Contact Us</button>
-                        </div>
-                        {/* <h3 style={{ ...mt('10px') }}>Lets build it together</h3>
+                            <button className="btn-primary">Contact Us</button>
+                          </div>
+                          {/* <h3 style={{ ...mt('10px') }}>Lets build it together</h3>
 
                         <button onClick={moveTo} className="btn-primary">
                           Contact Us
                         </button> */}
+                        </Layer>
+                        <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
+                          <img width={600} src={'/img/juicy.png'} />
+                        </Layer>
                       </Layer>
-                      <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
-                        <img width={600} src={'/img/juicy.png'} />
-                      </Layer>
-                    </Layer>
+                    </div>
                   </Layer>
                 </div>
                 <div className="section red">
                   <Layer fill={1} flexCenter>
-                    <Layer fill={1} flex={'row'}>
-                      <Layer
-                        className="border-red"
-                        style={{ ...dimensions('50%', '100%', 1) }}
-                        flexCenter
-                        align={'center'}>
-                        <img width={600} src={'/img/phone.png'} />
-                      </Layer>
-                      <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
-                        <div style={{ ...w('650px') }}>
-                          <h1>
-                            You need help <br />
-                            <TextLoop>
-                              <span className="color-red">creating</span>
-                              <span className="color-red">designing</span>
-                              <span className="color-red">visualizing</span>
-                            </TextLoop>{' '}
-                            it.
-                          </h1>
+                    <div style={{ ...dimensions('1400px', '100%', 1) }}>
+                      <Layer fill={1} flex={'row'}>
+                        <Layer
+                          className="border-red"
+                          style={{ ...dimensions('50%', '100%', 1) }}
+                          flexCenter
+                          align={'center'}>
+                          <img width={600} src={'/img/phone.png'} />
+                        </Layer>
+                        <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
+                          <div style={{ ...w('100%') }}>
+                            <h1>
+                              You need help <br />
+                              <TextLoop>
+                                <span className="color-red">creating</span>
+                                <span className="color-red">designing</span>
+                                <span className="color-red">visualizing</span>
+                              </TextLoop>{' '}
+                              it.
+                            </h1>
 
-                          <p>
-                            From logo and UX design to web development. We have you covered. <br />
-                            Codeboot is media agency, but the slaves love what they do, <br />
-                            and they get paid too... so like— maybe not like a slave trade.
-                          </p>
-                        </div>
+                            <p>
+                              From logo and UX design to web development. We have you covered. <br />
+                              Codeboot is media agency, but the slaves love what they do, <br />
+                              and they get paid too... so like— maybe not like a slave trade.
+                            </p>
+                          </div>
+                        </Layer>
                       </Layer>
-                    </Layer>
+                    </div>
                   </Layer>
                 </div>
                 <div className="section blue">
                   <div className="box-blue" />
                   <Layer fill={1} flexCenter>
-                    <Layer fill={1} flex={'row'}>
-                      <Layer className="border-blue" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
-                        <div style={{ ...w('650px') }}>
-                          <h1>
-                            We build you <br /> a sweet{' '}
-                            <TextLoop>
-                              <span className="color-blue">product.</span>
-                              <span className="color-blue">brand.</span>
-                              <span className="color-blue">wireframe.</span>
-                              <span className="color-blue">prototype.</span>
-                              <span className="color-blue">logo.</span>
-                              <span className="color-blue">design.</span>
-                            </TextLoop>{' '}
-                          </h1>
+                    <div style={{ ...dimensions('1400px', '100%', 1) }}>
+                      <Layer fill={1} flex={'row'}>
+                        <Layer className="border-blue" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
+                          <div style={{ ...w('100%') }}>
+                            <h1>
+                              We build you <br /> a sweet{' '}
+                              <TextLoop>
+                                <span className="color-blue">product.</span>
+                                <span className="color-blue">brand.</span>
+                                <span className="color-blue">wireframe.</span>
+                                <span className="color-blue">prototype.</span>
+                                <span className="color-blue">logo.</span>
+                                <span className="color-blue">design.</span>
+                              </TextLoop>{' '}
+                            </h1>
 
-                          <p>
-                            From logo and UX design to web development. We have you covered. <br />
-                            Codeboot is media agency, but the slaves love what they do, <br />
-                            and they get paid too... so like— maybe not like a slave trade.
-                          </p>
-                        </div>
+                            <p>
+                              From logo and UX design to web development. We have you covered. <br />
+                              Codeboot is media agency, but the slaves love what they do, <br />
+                              and they get paid too... so like— maybe not like a slave trade.
+                            </p>
+                          </div>
+                        </Layer>
+                        <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
+                          <img width={600} src={'/img/sweet.png'} />
+                        </Layer>
                       </Layer>
-                      <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
-                        <img width={600} src={'/img/sweet.png'} />
-                      </Layer>
-                    </Layer>
+                    </div>
                   </Layer>
                 </div>
                 <div className="section blue border-tb">
                   <Layer fill={1} flexCenter>
                     <Layer fill={1} flex={'row'}>
                       <Layer className="border-all" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
-                        <h1 className="color-green">UX & Design</h1>
+                        <div style={{ ...dimensions('80%', 'auto', 1) }}>
+                          {' '}
+                          <h1 className="color-green">UX & Design</h1>
+                          <p>
+                            From logo and UX design to web development. We have you covered. Codeboot is media agency,
+                            but the slaves love what they do.
+                          </p>
+                        </div>
                       </Layer>
                       <Layer
                         className="border-all home-shadow-both"
                         style={{ ...dimensions('50%', '100%', 1) }}
                         flexCenter>
-                        <h1 className="color-red">Development</h1>
+                        <div style={{ ...dimensions('80%', 'auto', 1) }}>
+                          {' '}
+                          <h1 className="color-red">Development</h1>
+                          <p>
+                            From logo and UX design to web development. We have you covered. Codeboot is media agency,
+                            but the slaves love what they do.
+                          </p>
+                        </div>
                       </Layer>
                       <Layer className="border-all" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
-                        <h1 className="color-blue">Marketing</h1>
+                        <div style={{ ...dimensions('80%', 'auto', 1) }}>
+                          {' '}
+                          <h1 className="color-blue">Marketing</h1>
+                          <p>
+                            From logo and UX design to web development. We have you covered. Codeboot is media agency,
+                            but the slaves love what they do.
+                          </p>
+                        </div>
                       </Layer>
                     </Layer>
                   </Layer>
