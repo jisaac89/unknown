@@ -468,4 +468,26 @@ export const GlobalStyle = createGlobalStyle`
 		transform: translate(-50%,-50%);
 	}
 
+	.juicy{
+		filter: drop-shadow(0px 13px 18px #6dad0b);
+		transform: translate(0px,500px);
+		transition:  .45s all ease-in-out;
+	}
+
+	.phone{
+		filter: drop-shadow(0px 13px 18px #bbb);
+		transform: translate(0px,500px);
+		transition:  .45s all ease-in-out;
+	}
+
+	.sweet{
+		filter: drop-shadow(0px 13px 18px #fe6eb5);
+		transform: translate(0px,500px);
+		transition:  .45s all ease-in-out;
+	}
+
+	.active img.juicy,.active img.sweet,.active img.phone {
+    transform: translate(0,0);
+}
+
 `
