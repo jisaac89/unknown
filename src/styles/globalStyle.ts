@@ -443,4 +443,29 @@ export const GlobalStyle = createGlobalStyle`
 		text-align:right;
 	}
 
+	.home-video{
+		position:absolute;
+		top:0;
+		left:0;
+		height:100%;
+		width:100%;
+		opacity:0.12
+	}
+
+	.home-video video{
+		/* Make video to at least 100% wide and tall */
+		min-width: 100%; 
+		min-height: 100%; 
+		
+		/* Setting width & height to auto prevents the browser from stretching or squishing the video */
+		width: auto;
+		height: auto;
+		
+		/* Center the video */
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
 `

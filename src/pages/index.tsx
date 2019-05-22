@@ -33,6 +33,12 @@ export default () => {
               <ReactFullpage.Wrapper>
                 <div className="section green">
                   <div className="box-green" />
+
+                  <div className="home-video">
+                    <video className="video-container video-container-overlay" autoPlay loop>
+                      <source src={'/thinking.mp4'} type="video/mp4" />
+                    </video>
+                  </div>
                   <Layer fill={1} flexCenter>
                     <div style={{ ...dimensions('1400px', '100%', 1) }}>
                       <Layer fill={1} flex={'row'}>
@@ -105,13 +111,18 @@ export default () => {
                 </div>
                 <div className="section blue">
                   <div className="box-blue" />
+                  <div className="home-video">
+                    <video className="video-container video-container-overlay" autoPlay loop>
+                      <source src={'/happy.mp4'} type="video/mp4" />
+                    </video>
+                  </div>
                   <Layer fill={1} flexCenter>
                     <div style={{ ...dimensions('1400px', '100%', 1) }}>
                       <Layer fill={1} flex={'row'}>
                         <Layer className="border-blue" style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
                           <div style={{ ...w('100%') }}>
                             <h1>
-                              We build you <br /> a sweet{' '}
+                              We build you <br /> a sweet <br />
                               <TextLoop>
                                 <span className="color-blue">product.</span>
                                 <span className="color-blue">brand.</span>
