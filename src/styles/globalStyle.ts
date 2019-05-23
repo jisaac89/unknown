@@ -490,4 +490,73 @@ export const GlobalStyle = createGlobalStyle`
     transform: translate(0,0);
 }
 
+.proj1 {
+	filter: drop-shadow(0px 13px 18px #fe6eb5);
+}
+
+.proj2 {
+	filter: drop-shadow(0px 13px 18px blue);
+}
+
+
+.proj3 {
+	filter: drop-shadow(0px 13px 18px orange);
+}
+
+
+.proj1 {
+	filter: drop-shadow(0px 13px 18px #fe6eb5);
+}
+
+
+.proj1{
+
+	position:absolute;
+	top:50px;
+	left:150px;
+	transform: translate(0px,1000px);
+	transition:  .5s all ease-in-out;
+}
+
+.active  .proj1{
+	transform: translate(0,0);
+}
+
+.proj2{
+	position:absolute;
+	top:300px;
+	right:150px;
+	transform: translate(0px,1000px);
+	transition: 1s all ease-in-out;
+
+}
+
+.active  .proj2{
+	transform: translate(0,0);
+}
+
+.proj3{
+	position:absolute;
+	bottom:300px;
+	left:120px;
+	transform: translate(0px,1000px);
+	transition:  1.5s all ease-in-out;
+}
+
+.active  .proj3{
+	transform: translate(0,0);
+}
+
+.proj4{
+	position:absolute;
+	bottom:100px;
+	right:200px;
+	transform: translate(0px,1000px);
+	transition:  2s all ease-in-out;
+}
+
+.active  .proj4{
+	transform: translate(0,0);
+}
+
 `

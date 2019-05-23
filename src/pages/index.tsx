@@ -11,7 +11,7 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
   /* <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> */
 }
 
-const ParallaxImage = ({ src, className, width }) => (
+const ParallaxImage = ({ src, className, width = 'auto' }) => (
   <Parallax className="custom-class" x={[20, 20]} y={[0, 0]}>
     <img className={className} width={width} src={src} />
   </Parallax>
@@ -42,7 +42,7 @@ export default () => {
                     <div className="box-green" />
 
                     <div className="home-video">
-                      <video className="video-container video-container-overlay" autoPlay loop>
+                      <video data-autoplay className="video-container video-container-overlay" autoPlay loop>
                         <source src={'/thinking.mp4'} type="video/mp4" />
                       </video>
                     </div>
@@ -55,10 +55,12 @@ export default () => {
                             <div style={{ ...w('100%') }}>
                               <h1 style={{ ...mt('10px') }}>
                                 You have a <br />
+                                Juicy{' '}
                                 <TextLoop>
-                                  <span className="color-green">Juicy</span>
-                                </TextLoop>{' '}
-                                idea.
+                                  <span className="color-green">Idea</span>
+                                  <span className="color-green">Concept</span>
+                                  <span className="color-green">Promotion</span>
+                                </TextLoop>
                               </h1>
 
                               <p>
@@ -76,7 +78,7 @@ export default () => {
                         </button> */}
                           </Layer>
                           <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
-                            <ParallaxImage className="juicy" width={600} src={'/img/juicy.png'} />
+                            <ParallaxImage className="juicy" width={'600px'} src={'/img/juicy.png'} />
                           </Layer>
                         </Layer>
                       </div>
@@ -92,6 +94,10 @@ export default () => {
                             flexCenter
                             align={'center'}>
                             <img className="phone" width={600} src={'/img/phone.png'} />
+                            <img className="proj1" src={'/img/project1.png'} />
+                            <img className="proj2" src={'/img/project2.png'} />
+                            <img className="proj3" src={'/img/project3.png'} />
+                            <img className="proj4" src={'/img/project4.png'} />
                           </Layer>
                           <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter>
                             <div style={{ ...w('100%') }}>
@@ -106,9 +112,8 @@ export default () => {
                               </h1>
 
                               <p>
-                                From logo and UX design to web development. We have you covered. <br />
-                                Codeboot is media agency, but the slaves love what they do, <br />
-                                and they get paid too... so like— maybe not like a slave trade.
+                                We build beautiful brands and products from the ground up. <br /> Every problem has a
+                                elengant solution and we beleive that research is the key to success.
                               </p>
                             </div>
                           </Layer>
@@ -119,7 +124,7 @@ export default () => {
                   <div className="section blue">
                     <div className="box-blue" />
                     <div className="home-video">
-                      <video className="video-container video-container-overlay" autoPlay loop>
+                      <video data-autoplay className="video-container video-container-overlay" autoPlay loop>
                         <source src={'/happy.mp4'} type="video/mp4" />
                       </video>
                     </div>
