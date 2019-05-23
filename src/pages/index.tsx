@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Layer } from '../recoil2/components/Layer/Layer'
 import ReactFullpage from '@fullpage/react-fullpage'
 import { TextMast } from '../components/TextMask'
@@ -11,17 +11,7 @@ import { ParallaxProvider, Parallax } from 'react-scroll-parallax'
   /* <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> */
 }
 
-const ParallaxImage = ({ src, className, width = 'auto' }) => (
-  <Parallax className="custom-class" x={[20, 20]} y={[0, 0]}>
-    <img className={className} width={width} src={src} />
-  </Parallax>
-)
-
 export default () => {
-  // const onSlideLeave = (origin, destination: { index: number }, direction) => {
-  //   console.log(destination.index)
-  // }
-
   return (
     <Layer flex={'column'} fill={1}>
       <ReactFullpage
@@ -38,11 +28,12 @@ export default () => {
                 <button className="btn-primary">Contact Us</button>
               </div> */}
                 <ReactFullpage.Wrapper>
+                  {/* <img className="abs" width={'600px'} src={'/img/sweet.png'} /> */}
                   <div className="section green">
                     <div className="box-green" />
 
                     <div className="home-video">
-                      <video data-autoplay className="video-container video-container-overlay" autoPlay loop>
+                      <video muted data-autoplay className="video-container video-container-overlay" autoPlay loop>
                         <source src={'/thinking.mp4'} type="video/mp4" />
                       </video>
                     </div>
@@ -78,7 +69,7 @@ export default () => {
                         </button> */}
                           </Layer>
                           <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
-                            <ParallaxImage className="juicy" width={'600px'} src={'/img/juicy.png'} />
+                            <img className="juicy" width={'600px'} src={'/img/juicy.png'} />
                           </Layer>
                         </Layer>
                       </div>
@@ -124,7 +115,7 @@ export default () => {
                   <div className="section blue">
                     <div className="box-blue" />
                     <div className="home-video">
-                      <video data-autoplay className="video-container video-container-overlay" autoPlay loop>
+                      <video muted data-autoplay className="video-container video-container-overlay" autoPlay loop>
                         <source src={'/happy.mp4'} type="video/mp4" />
                       </video>
                     </div>
@@ -153,7 +144,7 @@ export default () => {
                             </div>
                           </Layer>
                           <Layer style={{ ...dimensions('50%', '100%', 1) }} flexCenter align={'center'}>
-                            <img className="sweet" width={600} src={'/img/sweet.png'} />
+                            <img className="sweet" width={'600px'} src={'/img/sweet.png'} />
                           </Layer>
                         </Layer>
                       </div>
@@ -208,7 +199,6 @@ export default () => {
                     </Layer>
                   </div>
                 </ReactFullpage.Wrapper>
-                <div className={`home-box home-box-${state.origin ? state.origin.index : 0}`} />
               </Layer>
             </ParallaxProvider>
           )

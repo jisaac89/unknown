@@ -559,4 +559,9 @@ export const GlobalStyle = createGlobalStyle`
 	transform: translate(0,0);
 }
 
+.abs{
+	position:absolute;
+	z-index:-1;
+}
+
 `
