@@ -493,24 +493,19 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 .proj1 {
-
-	// filter: drop-shadow(0px 13px 18px #fe6eb5);
+	 filter: drop-shadow(0px 13px 18px #fe6eb5);
 }
 
 .proj2 {
-
-	// filter: drop-shadow(0px 13px 18px blue);
+	 filter: drop-shadow(0px 13px 18px blue);
 }
-
 
 .proj3 {
-
-	// filter: drop-shadow(0px 13px 18px orange);
+	 filter: drop-shadow(0px 13px 18px orange);
 }
 
-.proj1 {
-
-	// filter: drop-shadow(0px 13px 18px #fe6eb5);
+.proj4 {
+	 filter: drop-shadow(0px 13px 18px #fe6eb5);
 }
 
 
@@ -567,6 +562,11 @@ export const GlobalStyle = createGlobalStyle`
 		line-height:40px;
 		text-transform: uppercase;
 	}
+}
+
+body, html, #___gatsby, #___gatsby > div{
+	height:100%;
+	flex:1;
 }
 
 `
