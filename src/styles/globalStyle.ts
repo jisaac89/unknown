@@ -472,19 +472,19 @@ export const GlobalStyle = createGlobalStyle`
 
 	.juicy{
 		filter: drop-shadow(0px 13px 18px #6dad0b);
-		transform: translate(0px,500px);
+		// transform: translate(0px,500px);
 		transition:  .45s all ease-in-out;
 	}
 
 	.phone{
 		filter: drop-shadow(0px 13px 18px #bbb);
-		transform: translate(0px,500px);
+		// transform: translate(0px,500px);
 		transition:  .45s all ease-in-out;
 	}
 
 	.sweet{
 		filter: drop-shadow(0px 13px 18px #fe6eb5);
-		transform: translate(0px,500px);
+		// transform: translate(0px,500px);
 		transition:  .45s all ease-in-out;
 	}
 

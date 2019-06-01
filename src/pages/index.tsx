@@ -14,6 +14,24 @@ const juicy = '/img/juicy.png'
 const phone = '/img/phone.png'
 const sweet = '/img/sweet.png'
 
+const HomeVideo = ({ src }) => {
+  return (
+    <video muted data-autoplay className="home-video video-container video-container-overlay" autoPlay loop>
+      <source src={src} type="video/mp4" />
+    </video>
+  )
+}
+
+const TextLoopMap = ({ color, arrOfStrings }) => {
+  return (
+    <TextLoop>
+      {arrOfStrings.map(title => {
+        return <span className={`color-${color}`}>{title}</span>
+      })}
+    </TextLoop>
+  )
+}
+
 export default () => {
   const isMobile = useMedia({ maxWidth: 800 })
   const autoSizeStyle = { ...dimensions('1400px', '100%', 1), margin: '0 auto' }
@@ -24,9 +42,7 @@ export default () => {
       <Layer scrollY fill={1}>
         <Layer fill={1} className="section green">
           <div className="box-green" />
-          <video muted data-autoplay className="home-video video-container video-container-overlay" autoPlay loop>
-            <source src={'/thinking.mp4'} type="video/mp4" />
-          </video>
+          <HomeVideo src={'/thinking.mp4'} />
           {isMobile ? (
             <Layer flexCenter fill={1}>
               <h1 style={{ ...mt('10px'), textAlign: 'center' }}>
@@ -42,12 +58,7 @@ export default () => {
                 <div>
                   <h1 style={{ ...mt('10px') }}>
                     You have a <br />
-                    Juicy{' '}
-                    <TextLoop>
-                      <span className="color-green">Idea</span>
-                      <span className="color-green">Concept</span>
-                      <span className="color-green">Promotion</span>
-                    </TextLoop>
+                    Juicy <TextLoopMap color={'green'} arrOfStrings={['Idea', 'Concept', 'Promotion']} />
                   </h1>
                   <p>
                     From logo and UX design to web development. We have you covered. <br />
@@ -58,7 +69,7 @@ export default () => {
                 </div>
               </Layer>
               <Layer style={halfBoxStyle} flexCenter align={'center'}>
-                <img width={featuredImageWidth} src={'/img/juicy.png'} />
+                <img className="juicy" width={featuredImageWidth} src={'/img/juicy.png'} />
               </Layer>
             </Layer>
           )}
@@ -68,7 +79,7 @@ export default () => {
             <div style={autoSizeStyle}>
               <Layer fill={1} flex={'row'}>
                 <Layer className="border-red" style={halfBoxStyle} flexCenter align={'center'}>
-                  <img width={featuredImageWidth} src={phone} />
+                  <img className="phone" width={featuredImageWidth} src={phone} />
                   <img className="proj1" src={project1} />
                   <img className="proj2" src={project2} />
                   <img className="proj3" src={project3} />
@@ -78,11 +89,7 @@ export default () => {
                   <div>
                     <h1>
                       You need help <br />
-                      <TextLoop>
-                        <span className="color-red">creating</span>
-                        <span className="color-red">designing</span>
-                        <span className="color-red">visualizing</span>
-                      </TextLoop>
+                      <TextLoopMap color={'red'} arrOfStrings={['creating', 'designing', 'visualizing']} />
                       it.
                     </h1>
                     <p>
@@ -97,9 +104,7 @@ export default () => {
         </div>
         <div className="section blue">
           <div className="box-blue" />
-          <video muted data-autoplay className="home-video video-container video-container-overlay" autoPlay loop>
-            <source src={'/happy.mp4'} type="video/mp4" />
-          </video>
+          <HomeVideo src={'/happy.mp4'} />
           <Layer fill={1} flexCenter>
             <div style={autoSizeStyle}>
               <Layer fill={1} flex={'row'}>
@@ -107,14 +112,10 @@ export default () => {
                   <div>
                     <h1>
                       We build you <br /> a sweet <br />
-                      <TextLoop>
-                        <span className="color-blue">product.</span>
-                        <span className="color-blue">brand.</span>
-                        <span className="color-blue">wireframe.</span>
-                        <span className="color-blue">prototype.</span>
-                        <span className="color-blue">logo.</span>
-                        <span className="color-blue">design.</span>
-                      </TextLoop>
+                      <TextLoopMap
+                        color={'blue'}
+                        arrOfStrings={['product', 'brand', 'wireframe', 'prototype', 'logo', 'design']}
+                      />
                     </h1>
                     <p>
                       From logo and UX design to web development. We have you covered. <br />
@@ -124,7 +125,7 @@ export default () => {
                   </div>
                 </Layer>
                 <Layer style={halfBoxStyle} flexCenter align={'center'}>
-                  <img width={featuredImageWidth} src={sweet} />
+                  <img className="sweet" width={featuredImageWidth} src={sweet} />
                 </Layer>
               </Layer>
             </div>
