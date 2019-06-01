@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		height:100%;
-        width:100%;
+    width:100%;
 		overflow:hidden;
 	}
 
@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 		font-family: 'Poppins';
+		-webkit-transform: translateZ(0);
 	}
 	*:focus {
 		outline: none;
@@ -307,6 +308,7 @@ export const GlobalStyle = createGlobalStyle`
 	.section{
 		position:relative;
 		overflow:hidden;
+		height:100%;
 	}
 
 
@@ -452,7 +454,7 @@ export const GlobalStyle = createGlobalStyle`
 		opacity:0.12
 	}
 
-	.home-video video{
+	.home-video{
 		/* Make video to at least 100% wide and tall */
 		min-width: 100%; 
 		min-height: 100%; 
@@ -491,77 +493,80 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 .proj1 {
-	filter: drop-shadow(0px 13px 18px #fe6eb5);
+
+	// filter: drop-shadow(0px 13px 18px #fe6eb5);
 }
 
 .proj2 {
-	filter: drop-shadow(0px 13px 18px blue);
+
+	// filter: drop-shadow(0px 13px 18px blue);
 }
 
 
 .proj3 {
-	filter: drop-shadow(0px 13px 18px orange);
+
+	// filter: drop-shadow(0px 13px 18px orange);
 }
 
-
 .proj1 {
-	filter: drop-shadow(0px 13px 18px #fe6eb5);
+
+	// filter: drop-shadow(0px 13px 18px #fe6eb5);
 }
 
 
 .proj1{
-
 	position:absolute;
 	top:50px;
 	left:150px;
-	transform: translate(0px,1000px);
-	transition:  .5s all ease-in-out;
 }
 
 .active  .proj1{
-	transform: translate(0,0);
+	-moz-transform: translate3d(0,0,0);
 }
 
 .proj2{
 	position:absolute;
 	top:300px;
 	right:150px;
-	transform: translate(0px,1000px);
-	transition: 1s all ease-in-out;
 
 }
 
 .active  .proj2{
-	transform: translate(0,0);
+	-moz-transform: translate3d(0,0,0);
 }
 
 .proj3{
 	position:absolute;
 	bottom:300px;
 	left:120px;
-	transform: translate(0px,1000px);
-	transition:  1.5s all ease-in-out;
 }
 
 .active  .proj3{
-	transform: translate(0,0);
+	-moz-transform: translate3d(0,0,0);
 }
 
 .proj4{
 	position:absolute;
 	bottom:100px;
 	right:200px;
-	transform: translate(0px,1000px);
-	transition:  2s all ease-in-out;
 }
 
 .active  .proj4{
-	transform: translate(0,0);
+	-moz-transform: translate3d(0,0,0);
 }
 
 .abs{
 	position:absolute;
 	z-index:-1;
+}
+
+@media screen and (max-width: 700px){
+	h1{
+		font-weight:900;
+		font-size:44px;
+		line-height:40px;
+		text-transform: uppercase;
+	}
 }
 
 `
