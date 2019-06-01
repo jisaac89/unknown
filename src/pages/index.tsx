@@ -28,15 +28,11 @@ export default () => {
             <source src={'/thinking.mp4'} type="video/mp4" />
           </video>
           {isMobile ? (
-            <Layer fill={1}>
-              <h1 style={{ ...mt('10px') }}>
+            <Layer flexCenter fill={1}>
+              <h1 style={{ ...mt('10px'), textAlign: 'center' }}>
                 You have a <br />
                 Juicy <br />
-                <TextLoop>
-                  <span className="color-green">Idea</span>
-                  <span className="color-green">Concept</span>
-                  <span className="color-green">Promotion</span>
-                </TextLoop>
+                <span className="color-green">Concept</span>
               </h1>
               <img width={'300px'} src={juicy} />
             </Layer>
